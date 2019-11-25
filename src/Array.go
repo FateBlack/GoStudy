@@ -1,6 +1,8 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 //数组
 func main() {
@@ -19,5 +21,4 @@ func main() {
 	for i, v := range arr {
 		fmt.Printf("索引 %d ,值 %d\n", i, v)
 	}
-
 }

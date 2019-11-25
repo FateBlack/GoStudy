@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"sort"
+)
 
 //切片 ，类似 list
 func main() {
@@ -48,4 +51,7 @@ func main() {
 	for i := 0; i < len(sliceD); i++ {
 		fmt.Println(sliceD[i])
 	}
+	//排序
+	sort.Ints(sliceD)
+	fmt.Println(sliceD)
 }
