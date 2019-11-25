@@ -13,7 +13,17 @@ func more(x int) (string, int) {
 	return "success", x
 }
 
-//可变参数 ,任意数量参数；例 传入任意数量 int 数字
+//可变参数 任意类型和数量，
+// 空interface(interface{})不包含任何的method，正因为如此，所有的类型都实现了空interface。
+func allChange(people ...interface{}) {
+	fmt.Println("参数 类型 和 数量 均可变化")
+	for _, v := range people {
+		fmt.Println(v)
+	}
+
+}
+
+//可变参数 ,任意数量参数；例 传入任意 int 数字
 func change(people ...int) {
 	sum := 0
 	for _, v := range people {
@@ -27,4 +37,7 @@ func main() {
 	fmt.Println(msg, code)
 
 	change(1, 2, 3)
+
+	allChange("a", "b", "c")
+	allChange(7, 8, 9)
 }
