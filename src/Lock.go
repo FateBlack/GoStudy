@@ -5,6 +5,8 @@ import (
 	"sync"
 )
 
+//互斥锁 Mutex
+
 var (
 	num   int
 	wg    sync.WaitGroup
