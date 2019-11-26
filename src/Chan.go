@@ -26,3 +26,10 @@ func main() {
 	fmt.Println(len(chB), cap(chB)) //当前长度，容量
 
 }
+
+//单向管道
+//var send chan<- int //只允许 发送
+//var receive <-chan int //只允许 接收
+// 例 : 限制了传入管道的功能，只允许其发送数据
+func test(send chan<- int) {
+}
