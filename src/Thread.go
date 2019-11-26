@@ -22,7 +22,8 @@ Go的runtime（运行时）会在逻辑处理器上调度这些goroutine来运�
 */
 
 func main() {
-	//runtime.GOMAXPROCS(1) 只使用一个逻辑处理器，即单核运行
+	//runtime.GOMAXPROCS(1) 设置逻辑处理器数量，即几核运行
+	//runtime.GOMAXPROCS(runtime.NumCPU())
 
 	var wg sync.WaitGroup //计数信号量 控制等待
 	wg.Add(2)             //信号量+2
