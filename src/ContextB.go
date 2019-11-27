@@ -30,6 +30,5 @@ func play(ctx context.Context, name string) {
 			fmt.Println(name, "正在执行")
 			time.Sleep(2 * time.Second)
 		}
-
 	}
 }
