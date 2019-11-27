@@ -7,7 +7,7 @@ import (
 )
 
 // Context 上下文 进行并发控制
-//例 控制并发停止
+//例 控制并发停止;   ContextB中进行多个goroutine的控制
 func main() {
 	/*
 		context.Background() 返回一个空的Context，此空的Context一般用于整个Context树的根节点。
