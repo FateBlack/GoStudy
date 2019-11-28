@@ -7,7 +7,13 @@ import (
 )
 
 //注：测试文件后缀必须 _test
-//cd 指定文件目录下 go test -v 即可
+//cd 指定文件目录下 go test -v 即可，
+
+/*
+显示覆盖率：go test -v -coverprofile=myFile.out 例会输出文件 myFile
+生成覆盖率详细报告:go tool cover -html=myFile.out -o=tag.html
+*/
+
 //单元测试
 func TestAdd(t *testing.T) {
 	sum := Add(2, 3)
