@@ -24,8 +24,17 @@ func main() {
 	//获取type的底层类型
 	fmt.Println(typ.Kind()) //例 struct
 
+	//遍历字段和方法
+	for i := 0; i < typ.NumField(); i++ {
+		fmt.Println(typ.Field(i).Name)
+	}
+	for i := 0; i < typ.NumMethod(); i++ {
+		fmt.Println(typ.Method(i).Name)
+	}
+
 }
 
 type Car struct {
 	name string
+	id   int
 }
